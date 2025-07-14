@@ -1,0 +1,146 @@
+/* ----------------------------------- *\
+			forms elements styles
+\* ----------------------------------- */
+.frm-main-search {
+	display: block;
+	position: relative;
+	line-height: 1;
+	.form-input {
+		height: 43px;
+		border-radius: 30px;
+		background: rgba(255, 255, 255, 0.90) url(../img/icons/search.png) 12px center no-repeat;
+		background-size: 24px auto;
+		border: none;
+		padding: 0 10px 0 50px;
+		font-size: 16px;
+		letter-spacing: normal;
+		color: var(--clr-base);
+	}
+}
+.frm-row,
+.frm-field,
+.frm-row-submit {
+    display: flex;
+    flex-wrap: wrap;
+	position: relative;
+	line-height: 1;
+}
+.frm-field {
+    display: block;
+    width: 100%;
+}
+.frm-select {
+	position: relative;
+	display: block;
+	overflow: hidden;
+    line-height: 1;
+	input {
+		display: block;
+		position: absolute;
+		top: 0;left: 0;
+		width: 0;height: 0;
+		opacity: 0;
+		margin: 0;
+		padding: 0;
+		&:checked {
+			&~label {
+				&:after {
+					opacity: 1;
+				}
+			}
+		}
+	}
+	label {
+		display: block;
+		position: relative;
+		cursor: pointer;
+        &:before, &:after {
+            content: "";
+            display: block;
+            position: absolute;
+        }
+		&:after {
+			opacity: 0;
+		}
+	}
+}
+
+
+.frm-select {
+	input {
+		&[type="radio"] {
+			&~label {
+				&:before {
+					border-radius: 50%;
+				}
+				&:after {
+					width: 8px;height: 8px;
+					margin: -4px 0 0 -4px;
+					border-radius: 50%;
+					background: #000;
+				}
+			}
+		}
+		&:checked {
+			&~label {
+				&:after {
+					opacity: 1;
+				}
+			}
+		}
+	}
+	label {
+		font-size: 15px;
+		line-height: 20px;
+		letter-spacing: (-0.6/15em);
+		font-weight: 300;
+		padding-left: 30px;
+		min-height: 20px;
+		&:before, &:after {
+			width: 20px;height: 20px;
+			border-radius: 4px;
+			top: 50%;left: 10px;
+			margin-top: -10px;
+			margin-left: -10px;
+			border: 1px solid var(--clr-base);
+		}
+		&:after {
+			border-radius: 0;
+			border: none;
+			background: url(../img/icons/check.svg) center / 16px auto no-repeat;
+			opacity: 0;
+		}
+	}
+	a {
+		color: inherit;
+		&:hover {
+			color: var(--clr-att);
+		}
+	}
+}
+@media (min-width: 1024px) {
+	.frm-main-search {
+		.form-input {
+			height: 6rem;
+			padding-left: 60px;
+			font-size: 2.4rem;
+			background-position: 20px center;
+			background-size: 24px auto;
+		}
+	}
+	.frm-select {
+		label {
+			min-height: 30px;
+			padding-left: 46px;
+			font-size: 18px;
+			line-height: 24px;
+			padding-top: 3px;
+			padding-bottom: 3px;
+			&:before, &:after {
+				width: 30px;height: 30px;
+				top: 15px;left: 15px;
+				margin: -15px 0 0 -15px;
+			}
+		}
+	}
+}
