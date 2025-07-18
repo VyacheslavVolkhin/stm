@@ -82,6 +82,15 @@ select.form-input:required:invalid {
 		border-color: var(--clr-att-second);
 		color: #fff;
 	}
+	&.button-border {
+		background-color: transparent;
+		color: var(--clr-att);
+		&:hover, &.active {
+			background-color: var(--clr-att);
+			border-color: var(--clr-att);
+			color: #fff;
+		}
+	}
 	&.button-selected {
 		background: #C3D6F5;
 		height: 36px;
@@ -235,7 +244,7 @@ select.form-input:required:invalid {
 			}
 		}
 	}
-	&.button-link {
+	&.button-link, &.button-link-toggle {
 		width: auto;
 		height: auto;
 		line-height: inherit;
@@ -254,6 +263,33 @@ select.form-input:required:invalid {
 		}
 		.button-ico {
 			filter: none
+		}
+	}
+	&.button-link-toggle {
+		padding: 0 30px 0 0;
+		font-size: 22px;
+		line-height: 30px;
+		color: var(--clr-att);
+		letter-spacing: (-0.66/22em);
+		&:hover {
+			color: var(--clr-att);
+		}
+		&.active {
+			&:before {
+				rotate: -90deg;
+			}
+		}
+		&:before {
+			content: "";
+			display: block;
+			width: 24px;
+			height: 24px;
+			position: absolute;
+			background: url(../img/icons/arrow-slider.svg) center no-repeat;
+			background-size: 20px auto;
+			top: 50%;right: 0;
+			margin-top: -12px;
+			rotate: 90deg;
 		}
 	}
 	&.button-content {
@@ -339,6 +375,31 @@ select.form-input:required:invalid {
 		&:before {
 			background-image: url(../img/icons/cross.svg);
 			background-size: 48px auto;
+		}
+	}
+	&.ico-toggle {
+		width: 44px;height: 44px;
+		margin-top: -22px;
+		&.btn {
+			border-radius: 50%;
+			padding: 0;
+			min-width: 0;
+			flex-shrink: 0;
+			&:before, &:after {
+				filter: var(--filterWhite);
+			}
+		}
+		&:before, &:after {
+			background-image: url(../img/icons/minus.svg);
+			background-size: 100% auto;
+		}
+		&:after {
+			rotate: 90deg;
+		}
+		&.active {
+			&:after {
+				rotate: 0deg;
+			}
 		}
 	}
     &.ico-arrow {
@@ -451,6 +512,10 @@ select.form-input:required:invalid {
 		font-size: 25px;
 		line-height: 30px;
 		letter-spacing: -1px;;
+		&.button-link-toggle {
+			font-size: 25px;
+			padding-left: 18px;
+		}
 		&.button-selected {
 			height: 4.3rem;
 			padding: 0 34px 0 15px;
@@ -466,6 +531,11 @@ select.form-input:required:invalid {
 		}
 	}
 	.btn-action-ico {
+		&.ico-toggle {
+			width: 6.8rem;
+			height: 6.8rem;
+			margin-top: -3.4rem;
+		}
 		&.ico-arrow {
 			width: 6.8rem;
 			height: 6.8rem;
