@@ -71,6 +71,12 @@
 	border-radius: var(--mainRadius);
 	background: #EDF0F5;
 	padding: 10px;
+	&.tile-att {
+		background: #C3D6F5;
+		.tile-content-wrap {
+			background: #C3D6F5;
+		}
+	}
 	.tile-content-wrap {
 		display: flex;
 		flex: 1;
@@ -794,6 +800,12 @@
 		border-radius: 0;
 		padding: 0;
 		background: none;
+		&.tile-att {
+			background: none;
+			.tile-content-wrap {
+				background: #C3D6F5;
+			}
+		}
 		.tile-content-wrap {
 			border-radius: var(--mainRadius);
 			background: #EDF0F5;
