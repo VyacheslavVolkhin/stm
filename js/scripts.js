@@ -3,27 +3,28 @@ document.addEventListener("DOMContentLoaded", function () {
   Fancybox.bind("[data-fancybox]", {
     //settings
   });
-
+  
   //parallax
   function parallaxScroll() {
-    document.querySelectorAll(".js-parallax img").forEach(function (img) {
-      const parent = img.parentElement;
-      const speed = 0.4;
-      const rect = parent.getBoundingClientRect();
-      const windowHeight = window.innerHeight;
-      if (rect.bottom > 0 && rect.top < windowHeight) {
-        const percentSeen =
-          (windowHeight - rect.top) / (windowHeight + rect.height);
-        const move = 0.5*(rect.height * speed * percentSeen);
-        img.style.transform = `translateY(${move}px)`;
-      }
-    });
+	document.querySelectorAll(".js-parallax img").forEach(function (img) {
+			const parent = img.parentElement;
+			const speed = 0.4;
+			const rect = parent.getBoundingClientRect();
+			const windowHeight = window.innerHeight;
+			if (rect.bottom > 0 && rect.top < windowHeight) {
+				const percentSeen =
+						(windowHeight - rect.top) / (windowHeight + rect.height);
+				const move = 0.5*(rect.height * speed * percentSeen);
+				img.style.transform = `translateY(${move}px)`;
+			}
+	});
   }
-
   window.addEventListener("scroll", parallaxScroll);
   window.addEventListener("resize", parallaxScroll);
   parallaxScroll();
 
+
+  
   //mobile menu
   const menuButton = document.querySelectorAll(".popup-menu-wrap li a");
   if (window.innerWidth < 1024) {
