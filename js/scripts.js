@@ -5,23 +5,19 @@ document.addEventListener("DOMContentLoaded", function () {
   });
   
   //parallax
-  function parallaxScroll() {
-	document.querySelectorAll(".js-parallax img").forEach(function (img) {
-			const parent = img.parentElement;
-			const speed = 0.4;
-			const rect = parent.getBoundingClientRect();
-			const windowHeight = window.innerHeight;
-			if (rect.bottom > 0 && rect.top < windowHeight) {
-				const percentSeen =
-						(windowHeight - rect.top) / (windowHeight + rect.height);
-				const move = 0.5*(rect.height * speed * percentSeen);
-				img.style.transform = `translateY(${move}px)`;
-			}
+  const parallaxImg = document.querySelector('.js-parallax img');
+		document.addEventListener('mousemove', (e) => {
+		const mouseX = e.clientX;
+		const mouseY = e.clientY;
+		
+		const centerX = window.innerWidth / 2;
+		const centerY = window.innerHeight / 2;
+
+		const deltaX = (mouseX - centerX) / 10;
+		const deltaY = (mouseY - centerY) / 10;
+		parallaxImg.style.transform = `translate(${deltaX}px, ${deltaY}px)`;
 	});
-  }
-  window.addEventListener("scroll", parallaxScroll);
-  window.addEventListener("resize", parallaxScroll);
-  parallaxScroll();
+
 
 
   
