@@ -1459,6 +1459,10 @@ html.with-fancybox body.hide-scrollbar {
   top: 50%;
   right: 0;
 }
+.item-tile-faq .tile-toggle-action:hover,
+.item-tile-download .tile-toggle-action:hover {
+  transform: scale(1.1);
+}
 .item-tile-faq .tile-action,
 .item-tile-download .tile-action {
   display: block;
@@ -1591,8 +1595,13 @@ html.with-fancybox body.hide-scrollbar {
   position: relative;
   background: #fff;
   text-align: center;
+  transition: all ease 0.2s;
   border-radius: var(--mainRadius);
   padding: 30px;
+}
+.item-tile-info-about:hover {
+  color: #fff;
+  background-color: var(--clr-att);
 }
 .item-tile-info-about .tile-title {
   font-size: 22px;
@@ -1875,7 +1884,7 @@ html.with-fancybox body.hide-scrollbar {
   line-height: 1.13636364;
   letter-spacing: -0.03em;
   color: var(--clr-att);
-  transition: all ease 0.2s;
+  transition: all ease 0.6s;
   padding: 20px;
 }
 .item-tile-service:hover,
@@ -1885,6 +1894,7 @@ html.with-fancybox body.hide-scrollbar {
 }
 .item-tile-service:hover .tile-ico,
 .item-tile-service.active .tile-ico {
+  transform: scale(1.1);
   border-color: #fff;
 }
 .item-tile-service:hover .tile-ico img,
@@ -1951,6 +1961,7 @@ html.with-fancybox body.hide-scrollbar {
 }
 .item-tile-point:hover .tile-action {
   background-color: var(--clr-att-second);
+  transform: scale(1.1);
 }
 .item-tile-point .tile-title {
   display: inline;

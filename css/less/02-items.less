@@ -34,6 +34,9 @@
 	.tile-toggle-action {
 		position: absolute;
 		top: 50%;right: 0;
+		&:hover {
+			transform: scale(1.1);
+		}
 	}
 	.tile-action {
 		display: block;
@@ -151,8 +154,13 @@
 	position: relative;
 	background: #fff;
 	text-align: center;
+	transition: all ease 0.2s;
 	border-radius: var(--mainRadius);
 	padding: 30px;
+	&:hover {
+		color: #fff;
+		background-color: var(--clr-att);
+	}
 	.tile-title {
 		font-size: 22px;
 		line-height: 25px;
@@ -416,12 +424,13 @@
 	line-height: (25/22);
 	letter-spacing: (-0.66/22em);
 	color: var(--clr-att);
-	transition: all ease 0.2s;
+	transition: all ease 0.6s;
 	padding: 20px;
 	&:hover, &.active {
 		color: #fff;
 		background-color: var(--clr-att);
 		.tile-ico {
+			transform: scale(1.1);
 			border-color: #fff;
 			img, svg {
 				filter: var(--filterWhite);
@@ -484,6 +493,7 @@
 		color: var(--clr-base);
 		.tile-action {
 			background-color: var(--clr-att-second);
+			transform: scale(1.1);
 		}
 	}
 	.tile-title {
