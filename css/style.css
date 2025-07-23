@@ -1216,7 +1216,7 @@ html.with-fancybox body.hide-scrollbar {
 }
 @media (min-width: 1024px) {
   .header .logo-inner-wrap {
-    width: 18.2rem;
+    width: 22rem;
     padding: 0;
     margin: 0;
     -ms-flex-order: 1;
@@ -1291,7 +1291,7 @@ html.with-fancybox body.hide-scrollbar {
     font-size: 19px;
     line-height: 1.23333333;
     letter-spacing: -1.2px;
-    padding: 12px 4rem;
+    padding: 5px 4rem;
     color: var(--clr-att);
   }
   .header .menu .menu .btn-menu:hover,
@@ -1411,6 +1411,9 @@ html.with-fancybox body.hide-scrollbar {
   }
 }
 @media (min-width: 1400px) {
+  .header .logo-inner-wrap {
+    width: 30rem;
+  }
   .header .btn-menu {
     font-size: 19px;
   }
