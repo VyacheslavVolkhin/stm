@@ -932,6 +932,9 @@ html.with-fancybox body.hide-scrollbar {
   padding-top: 5px;
   padding-bottom: 5px;
 }
+.footer .menu .menu .btn-menu:before {
+  display: none;
+}
 .footer .menu li.open .menu {
   display: block;
 }
@@ -1179,7 +1182,7 @@ html.with-fancybox body.hide-scrollbar {
   }
   .footer .btn-menu {
     font-size: 1.13636364em;
-    padding: 0.5em 0;
+    padding: 0.2em 0;
     letter-spacing: 0.01em;
   }
   .footer .footer-title {
@@ -1379,8 +1382,8 @@ html.with-fancybox body.hide-scrollbar {
     width: 300px;
   }
   .header .menu-main .menu .btn-menu {
-    padding-top: 8px;
-    padding-bottom: 8px;
+    padding-top: 5px;
+    padding-bottom: 5px;
     font-size: 16px;
   }
   .header li:last-child .menu,
