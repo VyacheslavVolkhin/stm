@@ -410,6 +410,27 @@
 		color: var(--clr-att-second);
 	}
 }
+.tiles-services-box {
+	&:has(.item-wrap:hover) {
+		.item-tile-service.active {
+			&:not(:hover) {
+				background: var(--clr-bg-light);
+				color: var(--clr-att);
+				.tile-ico {
+					transform: scale(1);
+					border-color: var(--clr-att);
+					img, svg {
+						filter: none;
+					}
+				}
+				.tile-helper {
+					border-color: var(--clr-att);
+					color: var(--clr-att);
+				}
+			}
+		}
+	}
+}
 .item-tile-service {
 	display: flex;
 	flex-direction: column;
@@ -462,6 +483,8 @@
 		border: 1px solid var(--clr-att);
 		transition: all ease 0.2s;
 		margin: 0;
+		img, svg {
+		}
 	}
 	.tile-title {
 		display: block;

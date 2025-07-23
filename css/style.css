@@ -1105,7 +1105,7 @@ html.with-fancybox body.hide-scrollbar {
     letter-spacing: -1.44px;
   }
   .footer {
-    font-size: 2.2rem;
+    font-size: 18px;
     letter-spacing: -0.02em;
     padding-top: 2.6em;
     padding-bottom: 10rem;
@@ -1288,7 +1288,7 @@ html.with-fancybox body.hide-scrollbar {
   .header .menu .menu .btn-menu {
     height: auto;
     white-space: normal;
-    font-size: 3rem;
+    font-size: 19px;
     line-height: 1.23333333;
     letter-spacing: -1.2px;
     padding: 12px 4rem;
@@ -1410,9 +1410,14 @@ html.with-fancybox body.hide-scrollbar {
     font-size: 1.2em;
   }
 }
+@media (min-width: 1400px) {
+  .header .btn-menu {
+    font-size: 19px;
+  }
+}
 @media (min-width: 1600px) {
   .header .logo-inner-wrap {
-    width: 26.2rem;
+    width: 35rem;
   }
 }
 /* ----------------------------------- *\
@@ -1866,6 +1871,22 @@ html.with-fancybox body.hide-scrollbar {
 }
 .item-tile-doctor:hover {
   color: var(--clr-att-second);
+}
+.tiles-services-box:has(.item-wrap:hover) .item-tile-service.active:not(:hover) {
+  background: var(--clr-bg-light);
+  color: var(--clr-att);
+}
+.tiles-services-box:has(.item-wrap:hover) .item-tile-service.active:not(:hover) .tile-ico {
+  transform: scale(1);
+  border-color: var(--clr-att);
+}
+.tiles-services-box:has(.item-wrap:hover) .item-tile-service.active:not(:hover) .tile-ico img,
+.tiles-services-box:has(.item-wrap:hover) .item-tile-service.active:not(:hover) .tile-ico svg {
+  filter: none;
+}
+.tiles-services-box:has(.item-wrap:hover) .item-tile-service.active:not(:hover) .tile-helper {
+  border-color: var(--clr-att);
+  color: var(--clr-att);
 }
 .item-tile-service {
   display: -ms-flexbox;
@@ -4829,6 +4850,9 @@ html.with-fancybox body.hide-scrollbar {
     -ms-flex: 1;
         flex: 1;
   }
+  .wrap:has(.info-card-box) {
+    overflow: visible;
+  }
   .info-card-box {
     display: -ms-flexbox;
     display: flex;
@@ -4848,6 +4872,10 @@ html.with-fancybox body.hide-scrollbar {
     margin: 0;
     padding-top: 15px;
     padding-right: 4rem;
+  }
+  .info-card-box .photo-content-wrap {
+    position: sticky;
+    top: 30px;
   }
   .info-card-box .info-inner-wrap {
     width: 60%;
