@@ -5344,6 +5344,9 @@ body.popup-open {
     -ms-flex-align: center;
         align-items: center;
   }
+  .tiles-gallery-box .sl-wrap {
+    width: 360px;
+  }
   .tiles-gallery-box .btn-action-ico.ico-arrow {
     top: 50%;
     width: 9.5rem;
