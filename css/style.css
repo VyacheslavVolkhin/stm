@@ -4113,6 +4113,7 @@ html.with-fancybox body.hide-scrollbar {
       flex-direction: column;
   -ms-flex-pack: justify;
       justify-content: space-between;
+  overflow: visible;
 }
 .info-pluses-box .items-wrap {
   width: 100%;
@@ -4138,6 +4139,7 @@ html.with-fancybox body.hide-scrollbar {
 .info-pluses-box .box-inner-wrap {
   position: relative;
   padding: 35px 0 38px 0;
+  overflow: visible;
 }
 .info-pluses-box .section-title {
   font-size: 35px;
@@ -4187,6 +4189,7 @@ html.with-fancybox body.hide-scrollbar {
   z-index: 3;
   max-width: 373px;
   filter: drop-shadow(37.365px -89.312px 26.885px rgba(0, 0, 0, 0), 24.151px -56.959px 24.606px rgba(0, 0, 0, 0.01), 13.67px -31.897px 20.961px rgba(0, 0, 0, 0.02), 5.924px -14.126px 15.493px rgba(0, 0, 0, 0.03), 1.367px -3.645px 8.658px rgba(0, 0, 0, 0.04));
+  overflow: visible;
 }
 .tile-slider-box {
   margin-bottom: var(--marginSection);
@@ -5423,7 +5426,9 @@ body.popup-open {
     margin-left: -30px;
   }
   .info-pluses-box .box-inner-wrap {
-    padding: 7rem 0 5.5rem 0;
+    padding: 7rem 200px 5.5rem 200px;
+    width: calc(100% + 400px);
+    margin-left: -200px;
     overflow: hidden;
   }
   .info-pluses-box .item-tile-point {
